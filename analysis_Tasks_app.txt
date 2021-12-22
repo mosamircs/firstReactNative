@@ -1,0 +1,39 @@
+ToDo list[tasks] app:[using ReactNative]
+	1- add one task [text body of task][has category (work - persoanl - wishlist )]
+	2- mark it as [done]
+	3- edit task body
+	4- date and time of task
+	5- remider of doing it [yes - no][time to remind]
+	6- repeat task [yes - no][Hourly - daily - monthly]
+	7- add sub task 
+	8- add notes on the task
+	9- add attachment to the task [record voice - audio file - photo - video - text document] 
+	10- calender tab to add task by day and see them all
+	
+	
+in ui i will have 4 main tabs at bottom:
+	1- side bar tab [themes change - (widgets add) - settings] 
+	2- All Tasks [tasks tab]
+	3- Calender tab
+	4- Me tab[adding google account authentication and sync tasks cross my phones web] 
+	
+in database and API:
+	we can work using laravel and mysql database
+	tables:
+		0- user table:
+			for autentication and sync over google
+		1- tasks table:task can have many attachments
+			0- id [integer auto increment]
+			1- body[string] 
+			2- done [boolean]
+			3- data_time [timestamps]
+			4- remider [boolean]
+			5- remind_time[time]
+			6- repeat [boolean]
+			7- repeat_list [enum][Hourly - daily - monthly]
+			8- category [enum][work - persoanl - wishlist]
+			8- attachment_id [integer]
+		2- attachments table:
+			0-id [integer auto increment]
+			1- type[enum]
+			2- url_path[to upload on app][record voice - audio file - photo - video - text document]
